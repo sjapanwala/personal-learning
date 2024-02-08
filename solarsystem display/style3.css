@@ -1,0 +1,77 @@
+html{
+  background-image: url("360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg");
+  background-color: black;
+  background-image: url("360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg") ;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  align-items: center;
+}
+.sun {
+    position: relative;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    background-image: url('earth.png');
+    background-size: cover;
+    border-radius: 100px;
+    animation: spin 36.5s linear infinite;
+}
+
+.merc{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  background-image: url('pngtree-the-surface-of-a-round-moon-png-image_5955908.png');
+  background-size: cover;
+  border-radius: 25px;
+  animation: orbitmerc 2.73s linear infinite;
+}
+
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+
+@keyframes orbitmerc {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(300px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(300px) rotate(-360deg);
+    }
+  }
+
+@keyframes orbitven {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
+@keyframes orbitearth {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+  }

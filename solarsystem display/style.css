@@ -1,0 +1,226 @@
+
+html{
+    background-image: url("360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg");
+    background-color: black;
+    background-image: url("360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg") ;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h6{
+    color: white;
+    text-align:left;
+}
+
+
+/* each orbit is how many seconds 
+1 sec - 1 sec for orbit
+div all b y 50
+
+mercury - 88 days - 1.76
+venus - 224.7 - 4.494
+earth - 365 - 7.3
+mars - 687 - 13.74
+jupiter - 4380 - 87.6
+saturn - 10585 - 211.7
+uranus - 30660 - 613.2
+neptune - 60225 - 1204.5
+*/
+.sun {
+    position: relative;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    background-image: url('sun_PNG13424.png');
+    background-size: cover;
+    border-radius: 100px;
+    animation: spin 100s linear infinite;
+}
+
+.merc{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 25px;
+  width: 25px;
+  background-image: url('3D_Mercury.png');
+  background-size: cover;
+  border-radius: 25px;
+  animation: orbitmerc 1.76s linear infinite;
+}
+.ven{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+height: 50px;
+width: 50px;
+background-image: url('Venus_globe_-_transparent_background.png');
+background-size: cover;
+border-radius: 25px;
+animation: orbitven 4.494s linear infinite;
+}
+
+.earth{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 75px;
+    background-image: url('earth.png');
+    background-size: cover;
+    border-radius: 25px;
+    animation: orbitearth 7.3s linear infinite;
+}
+
+.mars{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 75px;
+    background-image: url('3D_Mars.png');
+    background-size: cover;
+    border-radius: 25px;
+    animation: orbitmars 13.74s linear infinite;
+}
+.jupit
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 75px;
+    background-image: url('Jupiter_\(transparent\).png');
+    background-size: cover;
+    border-radius: 25px;
+    animation: orbitjupit 87.6s linear infinite;
+}
+
+.saturn
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 100px;
+    background-image: url('Saturnx.png');
+    background-size: cover;
+    border-radius: 25px;
+    animation: orbitsaturn 211s linear infinite;
+}
+.uranus
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 75px;
+    background-image: url('Transparent_Uranus.png');
+    background-size: cover;
+    border-radius: 25px;
+    animation: orbituranus 613s linear infinite;
+}
+.neptune
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 75px;
+    background-image: url('776px-Neptune_cutout.png');
+    background-size: cover;
+    border-radius: 25px;
+    animation: orbitneptune 1204s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes orbitmerc {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+
+@keyframes orbitven {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
+@keyframes orbitearth {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+  }
+
+@keyframes orbitmars {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+  }
+@keyframes orbitjupit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(350px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(350px) rotate(-360deg);
+    }
+  }
+
+@keyframes orbitsaturn {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(400px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(400px) rotate(-360deg);
+    }
+  }
+
+@keyframes orbituranus {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(470px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(470px) rotate(-360deg);
+    }
+  }
+
+@keyframes orbitneptune {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(570px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(570px) rotate(-360deg);
+    }
+  }
