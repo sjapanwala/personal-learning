@@ -25,7 +25,7 @@ def makePyramid(x):
             print(level)    
             spaceVar = spaceVar - 1
 
-
+# sorting algo for 4 numbers, can be increased with more if and else statements (for even numbers with factors of 2)
 def largestNumber(items):
     """
     Finds the largest number between a list of 4 numbers
@@ -54,12 +54,82 @@ def largestNumber(items):
             largestNumberList = largestNumber2
     print(largestNumberList)
 
+def findTheDifference():
+    # there is a bug where it does not show the exact place where there is a discrepency
+    """
+    an algorithm to find the odd one out in a list
+    - Press "stop" to stop the intake of the list
+    """
+    userList = []
+    userInput = " "
+    condition = True
+    while userInput != "stop":
+        userInput = input("Please Enter The Items: ")
+        if userInput != "stop":
+            userList.append(userInput)
+    listLen = len(userList)
+    counter = 0
+    counter2 = 1
+    while counter != listLen:
+        if condition == True:
+            if userList[counter] == userList[counter2]:
+                counter = counter + 1
+                counter2 = counter2 + 1
+                condition =  True
+            else:
+                condition =  False
+                print(userList)
+                if counter == 0:
+                    print("list is too short or list has greater than 1 abnoramlity or no abnormalities")
+                else:
+                    print(f"an abnormality detected at {counter}")
+                counter = counter + 1
+                counter2 = counter2 + 1
+            
+def sortObjects():
+    """
+    inputs a list of anything and sorts them into their categories
+    - special characters/alphanumerics
+    - numbers/integers
+    - letters/strings
+    """
+    specialChars = []
+    intChars = []
+    strChars = []
+    nonClassifyable = []
+    
+    # This list can be changed or altered to allow a user to input it
+    userList = ["*", "!", "hello",5,10,500,2000,"this", "🔎", "😁😁❤🎶🌹"]  
+    counter = 0
+    while counter < len(userList):
+        if isinstance(userList[counter], int):
+            intChars.append(userList[counter])
+        elif userList[counter].isalpha():
+            strChars.append(userList[counter])
+        elif not userList[counter].isalnum():
+            specialChars.append(userList[counter])
+        else:
+            nonClassifyable.append(userList[counter])
+        counter += 1
+    
+    print("Finished Sorting")
+    print("Special Chars:", len(specialChars), "items")
+    if len(specialChars) > 0:
+        print(specialChars)
+    print("Integer Chars:", len(intChars), "Items")
+    if len(intChars) > 0:
+        print(intChars)
+    print("String Chars:", len(strChars), "Items")
+    if len(strChars) > 0:
+        print(strChars)
+    print("Non-Classifyable:", len(nonClassifyable), "Items")
+    if len(nonClassifyable) > 0:
+        print(nonClassifyable)
 
 
-
-
-
-#usrInput = int(input("Please Enter Layer Numbers: "))
-#makePyramid(usrInput)
-myList = (123,17236,82137,109238)
-largestNumber(myList)
+def printPyramid():
+    usrInput = int(input("Please Enter Layer Numbers: "))
+    makePyramid(usrInput)
+def printLargestNumber():
+    myList = (123,17236,82137,109238)
+    largestNumber(myList)
