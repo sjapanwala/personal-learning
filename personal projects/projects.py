@@ -99,7 +99,7 @@ def sortObjects():
     nonClassifyable = []
     
     # This list can be changed or altered to allow a user to input it
-    userList = ["*", "!", "hello",5,10,500,2000,"this", "🔎", "😁😁❤🎶🌹"]  
+    userList = [1,2,3,4,5,6,6,7]  
     counter = 0
     while counter < len(userList):
         if isinstance(userList[counter], int):
@@ -125,6 +125,52 @@ def sortObjects():
     print("Non-Classifyable:", len(nonClassifyable), "Items")
     if len(nonClassifyable) > 0:
         print(nonClassifyable)
+
+def diceRoll():
+    """
+    Simulates a Dice Roll
+    - Even Dice
+    - Unlimited Rolls
+    - Find Frequency
+    """
+    import random
+    amountOfRolls = int(input("How Many Roles Would You Like?: "))
+    sidedDice = ""
+    sidedDiceCond = False
+    while sidedDiceCond == False:
+        sidedDice = int(input("How Many Sides To The Dice?: "))
+        if sidedDice % 2 != 0:
+            print("This is Not an Even Sided Dice, Please Try Again")
+            sidedDiceCond = False
+        else:
+            sidedDiceCond = True
+    findFrequencyOfNumber = (input("Please Enter a Number To Find Its Frequency ('q' to skip): "))
+    if findFrequencyOfNumber != "q":
+        findFrequencyOfNumber = int(findFrequencyOfNumber)
+    counter = 0
+    rollList = []
+    while counter != amountOfRolls:
+        diceRoll = (random.randint(1,sidedDice))
+        rollList.append(diceRoll)
+        counter = counter+1
+    rollList.sort()
+    print(rollList)
+    occurs = rollList.count(findFrequencyOfNumber)
+    if findFrequencyOfNumber in rollList:
+        print(f"Number Exists {occurs} Time(s)")
+    else:
+        print("Number Does Not Exist")
+    # probability 
+    if findFrequencyOfNumber <= sidedDice:
+        listLenght = len(rollList)
+        probability = 1 / sidedDice7
+        probability = round(probability, 4)
+        print(f"There is a {probability} Chance To Roll {findFrequencyOfNumber}")
+    else:
+        print(f"Its Impossible to Roll {findFrequencyOfNumber} on This Dice ")
+
+    
+
 
 
 def printPyramid():
